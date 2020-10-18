@@ -1,31 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.css";
 import "tempusdominus-bootstrap/build/css/tempusdominus-bootstrap.css";
 import { Container, Form, Button, Alert, Row, Col } from "react-bootstrap";
 import { DatePicker } from "react-tempusdominus-bootstrap";
-
-//Firebase Initialize
-
-import firebase from "firebase/app";
-import "firebase/database";
-const API_KEY = process.env.REACT_APP_FIREBASE_API_KEY;
-
-export const config = {
-  apiKey: API_KEY,
-  authDomain: "time-tracker-9578e.firebaseapp.com",
-  databaseURL: "https://time-tracker-9578e.firebaseio.com",
-  projectId: "time-tracker-9578e",
-  storageBucket: "time-tracker-9578e.appspot.com",
-  messagingSenderId: "507541137774",
-  appId: "1:507541137774:web:d7da3f8f9561e6a98b797f",
-  measurementId: "G-3H30QVNSDH",
-};
-firebase.initializeApp(config);
+import firebase, { config } from "./firebase";
 
 //App
 function App() {
+  useEffect(() => {
+    firebase.initializeApp(config);
+  }, []);
+
   const [show, setShow] = useState(false);
 
   const [registro, setRegistro] = useState({
