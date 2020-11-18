@@ -1,5 +1,6 @@
 import firebase from "firebase/app";
 import "firebase/database";
+import "firebase/auth";
 const API_KEY = process.env.REACT_APP_FIREBASE_API_KEY;
 
 export const config = {
@@ -13,4 +14,8 @@ export const config = {
   measurementId: "G-3H30QVNSDH",
 };
 
+firebase.initializeApp(config);
+
+export const auth = firebase.auth();
+export const db = firebase.database;
 export default firebase;
