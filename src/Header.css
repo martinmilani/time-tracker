@@ -1,0 +1,45 @@
+.header {
+  margin-top: 15px;
+}
+
+.navBar {
+  padding: 0;
+}
+
+.navbar-brand {
+  margin-top: 5px;
+  padding-left: 10px;
+}
+
+.mr-auto {
+  margin-top: 5px;
+  height: 100%;
+}
+
+.navbar-text {
+  margin-right: 20px;
+  padding-top: 0 !important;
+}
+
+.navBar__formInput {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.navBar__button {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.navBar__button + .navBar__button {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 550px) {
+  .navBar__formInput {
+    margin-right: 0px;
+  }
+}
