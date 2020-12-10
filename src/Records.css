@@ -1,0 +1,10 @@
+.logs {
+  margin-top: 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.table {
+  margin-top: 1em;
+}

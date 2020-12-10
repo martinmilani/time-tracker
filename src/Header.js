@@ -3,7 +3,14 @@ import "./Header.css";
 import { Navbar, Form, FormControl, Button, Nav } from "react-bootstrap";
 import { auth } from "./firebase";
 
-function Header({ usuario, setUsuario, logged, setLogged }) {
+function Header({
+  usuario,
+  setUsuario,
+  logged,
+  setLogged,
+  setShow,
+  setToastText,
+}) {
   const logIn = (e) => {
     e.preventDefault();
     auth
@@ -20,6 +27,8 @@ function Header({ usuario, setUsuario, logged, setLogged }) {
       .createUserWithEmailAndPassword(usuario.email, usuario.password)
       .then((auth1) => {
         logged = true;
+        setShow(true);
+        setToastText("New User created");
       })
       .catch((error) => alert(error.message));
   };
@@ -33,7 +42,7 @@ function Header({ usuario, setUsuario, logged, setLogged }) {
     <div className="header">
       <Navbar expand="lg" bg="light">
         <Navbar.Brand href="#home">
-          <h3>Time Tracker</h3>
+          <h2>Time Tracker</h2>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -43,7 +52,7 @@ function Header({ usuario, setUsuario, logged, setLogged }) {
               <Nav className="mr-auto">
                 <Navbar.Text>Signed in as: {usuario.email}</Navbar.Text>
               </Nav>
-              <Button size="sm" onClick={handleLogout} variant="light">
+              <Button size="sm" onClick={handleLogout} variant="secondary">
                 Log Out
               </Button>
             </Form>
@@ -73,7 +82,7 @@ function Header({ usuario, setUsuario, logged, setLogged }) {
               <div className="header__buttons">
                 <Button
                   className="navBar__button"
-                  variant="light"
+                  variant="secondary"
                   type="submit"
                   size="sm"
                   onClick={logIn}
@@ -83,7 +92,7 @@ function Header({ usuario, setUsuario, logged, setLogged }) {
 
                 <Button
                   className="navBar__button"
-                  variant="light"
+                  variant="secondary"
                   type="submit"
                   size="sm"
                   onClick={register}
@@ -95,6 +104,7 @@ function Header({ usuario, setUsuario, logged, setLogged }) {
           )}
         </Navbar.Collapse>
       </Navbar>
+      <img src="./alertIcon.svg" alt="" />
     </div>
   );
 }

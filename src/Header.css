@@ -1,5 +1,5 @@
-.header {
-  margin-top: 15px;
+.navbar-container {
+  background-color: blue;
 }
 
 .navBar {
@@ -9,6 +9,10 @@
 .navbar-brand {
   margin-top: 5px;
   padding-left: 10px;
+}
+
+.navbar-brand > h2 {
+  font-weight: bold;
 }
 
 .mr-auto {
