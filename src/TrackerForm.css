@@ -1,8 +1,16 @@
 .trackerForm {
-  margin-top: 1em;
-  padding: 1em;
+  margin-top: 0.5em;
+  padding: 1.5em;
 }
-
 .calendario {
   margin-bottom: 14px;
+}
+
+.buttonSubmit {
+  margin-top: 1.5em;
+  width: 40%;
+}
+
+.container-fluid {
+  color: #5eb69d !important;
 }

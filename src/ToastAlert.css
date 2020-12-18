@@ -1,0 +1,16 @@
+.toastAlert {
+  position: absolute;
+  top: 95px;
+  right: 15px;
+  min-width: 300px;
+}
+
+.toast-header > img {
+  height: 20px;
+  width: auto;
+  margin-right: 5px;
+}
+
+.toast-header > .mr-auto {
+  margin: 0;
+}
