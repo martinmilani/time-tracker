@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Row, Col, Container, Image } from "react-bootstrap";
 import "./App.css";
-import SignIn from "./kingdom-sign-in.png";
+
 import ToastAlert from "./ToastAlert";
 import Header from "./Header.js";
 import TrackerForm from "./TrackerForm";
@@ -64,7 +64,7 @@ function App() {
         </Container>
       ) : (
         <Container className="login_container">
-          <Image fluid src={SignIn} alt="" />
+          <Image fluid src={require("../src/kingdom-sign-in.png")} alt="" />
           <h3>Please Login</h3>
         </Container>
       )}
