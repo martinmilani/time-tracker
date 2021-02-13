@@ -6,17 +6,17 @@
 
 ⏳ Time Tracker
 
-* 📧 Login/Sign up with email
+* 📧 Log in/Sign up with email
 ​
 * 📦 Track several proyects
 ​
-* 📝 Traking History (Real time database)
+* 📝 Tracking History (Real time database)
 
 
 ## Technologies used:
 
 * ReactJS
-* Html, css
+* Html, CSS
 * Firebase
 * Bootstrap
 
